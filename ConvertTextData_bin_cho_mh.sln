@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertTextData_bin_cho_mh", "ConvertTextData_bin_cho_mh.csproj", "{CD294596-22C6-40F6-9E64-CFB5B134954A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD294596-22C6-40F6-9E64-CFB5B134954A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD294596-22C6-40F6-9E64-CFB5B134954A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD294596-22C6-40F6-9E64-CFB5B134954A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD294596-22C6-40F6-9E64-CFB5B134954A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D6797F2-87FB-43C0-AE40-184D5406BE1A}
+	EndGlobalSection
+EndGlobal
