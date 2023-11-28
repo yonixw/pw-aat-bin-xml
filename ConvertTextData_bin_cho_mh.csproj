@@ -47,6 +47,7 @@
     <Compile Include="MessageHeader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="README.txt" />
     <Compile Include="XML.cs" />
   </ItemGroup>
   <ItemGroup>
