@@ -43,8 +43,9 @@ namespace ConvertTextData_bin_cho_mh
 			foreach (Data _d in this.data_)
             {
 				_b.AddRange(BitConverter.GetBytes((UInt16)_d.id));
-				
-				string source = _d.text;
+
+				string source = String.Join(",", _d.text.Select((s)=>s.Replace(",", "，"))) ;
+
 				if (language != Language.JAPAN)
                 {
 					source = EnToHalf(source, language, reverse: true);
@@ -70,6 +71,7 @@ namespace ConvertTextData_bin_cho_mh
 				ConvertTextData.Data item = default(ConvertTextData.Data);
 				item.id = BitConverter.ToUInt16(bytes, num);
 				num += 2;
+
 				while (num + 2 <= bytes.Length)
 				{
 					char c = BitConverter.ToChar(bytes, num);
@@ -80,6 +82,7 @@ namespace ConvertTextData_bin_cho_mh
 					}
 					stringBuilder.Append(c);
 				}
+
 				string text;
 				switch (language)
 				{
@@ -98,7 +101,7 @@ namespace ConvertTextData_bin_cho_mh
 				}
 			IL_B1:
 				text = text.Replace('φ', ' ');
-				item.text = text;
+				item.text = text.Split(',').Select((s)=>s.Replace( "，", ",")).ToArray();
 				stringBuilder.Length = 0;
 				list.Add(item);
 				continue;
@@ -116,7 +119,7 @@ namespace ConvertTextData_bin_cho_mh
 			[XmlAttribute]
 			public ushort id;
 
-			public string text;
+			public string[] text;
 		}
 
 		public static string EnToHalf(string in_text, Language in_language, bool reverse = false)
